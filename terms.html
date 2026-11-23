@@ -3,49 +3,179 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of use — Hydra Neck</title>
+<title>Terms of Service — Hydra Neck</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
 </head>
 <body>
 <main>
-  <!-- RASCUNHO: revisar com um advogado antes de abrir para o público. -->
+  <!-- Redigido sem revisão de advogado. Fatos (dados, prazos, preço) conferidos com o código em 23/11/2026. -->
   <a class="brand" href="./">🐍 Hydra Neck</a>
-  <h1>Terms of use</h1>
-  <p class="note">Draft, under review. Last updated: November 22, 2026.</p>
+  <h1>Terms of Service</h1>
+  <p class="note">Effective November 23, 2026. By subscribing to or using Hydra Neck you agree to
+    these terms and to the <a href="privacy.html">Privacy Policy</a>.</p>
 
-  <h2>1. The service</h2>
-  <p>Hydra Neck is a Telegram bot (@HydraNeckBot) that, at the customer's request, copies
-    messages from a source group to backup groups the customer chooses. Copies are made by
-    Telegram itself; Hydra Neck does not store photos, videos or files.</p>
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#service">The service</a></li>
+      <li><a href="#eligibility">Eligibility and your account</a></li>
+      <li><a href="#billing">Subscription and billing</a></li>
+      <li><a href="#cancel">Cancellation and refunds</a></li>
+      <li><a href="#use">Acceptable use</a></li>
+      <li><a href="#content">Your content and your groups</a></li>
+      <li><a href="#enforcement">Suspension and termination</a></li>
+      <li><a href="#telegram">Telegram and third parties</a></li>
+      <li><a href="#warranty">Availability and no warranty</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#changes">Changes to the service and these terms</a></li>
+      <li><a href="#law">Governing law</a></li>
+      <li><a href="#contact">Contact and abuse reports</a></li>
+    </ol>
+  </nav>
 
-  <h2>2. Responsibility for content</h2>
-  <p>Customers are solely responsible for the groups they manage and for the content that is
-    mirrored. Using the service with illegal content is forbidden, including child sexual
-    abuse or exploitation material, piracy, scams, or anything that violates
-    <a href="https://telegram.org/tos">Telegram's Terms of Service</a>. Such use leads to
-    immediate cancellation without refund, and to reporting to the authorities where the law
-    requires it.</p>
+  <h2 id="who">1. Who we are</h2>
+  <p>Hydra Neck (“we”, “us”) is operated by <b>Samuel Ferreira da Silva</b>, CPF
+    354.577.178-44, Brazil. The only support channel is the Telegram bot
+    <a href="https://t.me/HydraNeckBot">@HydraNeckBot</a> (see <a href="#contact">section 14</a>).</p>
 
-  <h2>3. Data we keep</h2>
-  <p>We keep the customer's Telegram ID, the IDs of paired groups, the list of trusted members
-    and the IDs of copied messages, only to operate the service. Payment data stays with Stripe.</p>
+  <h2 id="service">2. The service</h2>
+  <p>Hydra Neck is a Telegram bot that keeps backup copies of Telegram groups you manage. Once you
+    add it as an administrator to a source group and to one or more backup groups, it can:</p>
+  <ul>
+    <li>copy new posts from the source group to the backup groups — by default only posts from
+      people you mark as trusted, optionally after a quarantine delay, so that posts deleted during
+      the delay are never copied;</li>
+    <li>copy existing media from a group's history into another group (<code>/clone</code>);</li>
+    <li>copy the group's name, description, photo and forum topics to the backup.</li>
+  </ul>
+  <p>Copies are made by Telegram itself through its Bot API. Hydra Neck does not download or store
+    the text, photos, videos or files of your messages — only the identifiers needed to operate
+    (see the <a href="privacy.html">Privacy Policy</a>). A subscription covers up to 5 backup
+    groups.</p>
 
-  <h2>4. Subscription and cancellation</h2>
-  <p>The subscription costs US$ 20 per month, charged to a card through Stripe, and renews
-    automatically. Customers can cancel at any time via the <code>/account</code> command; the
-    service stays active until the end of the paid period. If a payment fails, backups pause
-    after 3 days.</p>
+  <h2 id="eligibility">3. Eligibility and your account</h2>
+  <ul>
+    <li>You must be at least 18 years old and able to enter into a binding contract.</li>
+    <li>Your account is your Telegram account. You are responsible for everything done with it
+      through the bot.</li>
+    <li>You may only connect groups that you own or administer with the authority to do so, and you
+      may only copy content you have the right to copy.</li>
+  </ul>
 
-  <h2>5. Limitations</h2>
-  <p>The service depends on Telegram and Stripe. We do not guarantee that a group will never be
-    removed, nor that messages sent before the bot joined, or deleted during quarantine, will
-    be copied.</p>
+  <h2 id="billing">4. Subscription and billing</h2>
+  <ul>
+    <li>The subscription costs <b>US$ 20 per month</b>, charged in advance to a card through
+      Stripe, and <b>renews automatically</b> every month until you cancel. Your bank may add
+      currency-conversion or international fees.</li>
+    <li>Payments are processed by Stripe; we never see or store your card details.</li>
+    <li>If a renewal payment fails, mirroring continues for a 3-day grace period and then pauses.
+      It resumes automatically once the payment goes through.</li>
+    <li>We may change the price with at least 30 days' notice through the bot. A new price applies
+      from your next renewal after the notice period; if you don't agree, you can cancel before
+      then.</li>
+    <li>Free or promotional access granted by us is a courtesy, lasts only for the period stated,
+      and can be withdrawn.</li>
+  </ul>
 
-  <h2>6. Reporting abuse</h2>
-  <p>To report misuse, message <a href="https://t.me/HydraNeckBot">@HydraNeckBot</a>.</p>
+  <h2 id="cancel">5. Cancellation and refunds</h2>
+  <ul>
+    <li>You can cancel at any time: send <code>/account</code> to the bot and use
+      <i>Manage / cancel subscription</i>, which opens Stripe's customer portal (log in with the
+      e-mail you paid with). Cancellation takes effect at the end of the period already paid, and
+      the service keeps working until then.</li>
+    <li><b>7-day refund:</b> if you ask within 7 days of your <i>first</i> payment, we refund it in
+      full.</li>
+    <li>Apart from that, payments are non-refundable and we don't refund partial months, except
+      where the law requires otherwise or where we end the service without cause (see
+      <a href="#enforcement">section 8</a>).</li>
+    <li>To request a refund, use <code>/support</code> in the bot.</li>
+  </ul>
 
-  <footer><a href="./">Back</a></footer>
+  <h2 id="use">6. Acceptable use</h2>
+  <p>You must not use Hydra Neck, or connect groups that are used, to:</p>
+  <ul>
+    <li>share child sexual abuse or exploitation material, or any sexual content involving
+      minors;</li>
+    <li>share intimate images of anyone without their consent;</li>
+    <li>infringe copyright or other intellectual property — including redistributing pirated
+      content or paid content you have no right to share;</li>
+    <li>publish leaked or stolen data, doxx people, or spread personal data unlawfully;</li>
+    <li>commit or promote fraud, scams, phishing or malware;</li>
+    <li>promote terrorism or violent extremism, or harass or threaten people;</li>
+    <li>copy groups you don't administer, or evade bans or restrictions imposed by Telegram or by
+      group administrators;</li>
+    <li>violate <a href="https://telegram.org/tos">Telegram's Terms of Service</a>, its
+      <a href="https://telegram.org/tos/bot-developers">bot rules</a>, or any applicable law;</li>
+    <li>interfere with the service, overload it on purpose, or try to access other customers'
+      data.</li>
+  </ul>
+
+  <h2 id="content">7. Your content and your groups</h2>
+  <ul>
+    <li>You keep all rights to your content. You give us only the permission needed to have
+      Telegram copy it between the groups you choose.</li>
+    <li>You are solely responsible for the groups you connect, for the content that is copied, and
+      for your members. If you mirror a group, let its members know that its content is backed up
+      to other groups.</li>
+    <li>For the personal data of your group's members, you decide what is mirrored and we process
+      it on your behalf (see the <a href="privacy.html">Privacy Policy</a>).</li>
+  </ul>
+
+  <h2 id="enforcement">8. Suspension and termination</h2>
+  <ul>
+    <li>If you break section 6 or 7, we may pause or end your mirrors and your subscription
+      immediately, <b>without refund</b>. Where the law requires it — for example, child sexual
+      abuse material — we report to the authorities and preserve the relevant records.</li>
+    <li>Because a single bot serves every customer, a group that puts the bot at risk of being
+      banned by Telegram may be disconnected right away, even before we have reviewed it.</li>
+    <li>We may also end the service for any other reason with 30 days' notice through the bot; in
+      that case we refund the unused part of your current period.</li>
+  </ul>
+
+  <h2 id="telegram">9. Telegram and third parties</h2>
+  <p>Hydra Neck is an independent service, not affiliated with or endorsed by Telegram. It depends
+    on Telegram (which may limit, change or block bots and groups at any time, including
+    @HydraNeckBot itself) and on Stripe for payments. We are not responsible for their actions,
+    outages or policies.</p>
+
+  <h2 id="warranty">10. Availability and no warranty</h2>
+  <p>We work to keep Hydra Neck running, but it is provided “as is”, without any availability
+    guarantee. In particular, we don't guarantee that:</p>
+  <ul>
+    <li>every message will be copied — for example, messages sent before the bot joined a group,
+      messages deleted during the quarantine, content Telegram does not let bots copy, or messages
+      sent while the service was down or your subscription was paused;</li>
+    <li>a backup group will never be removed, restricted or lost;</li>
+    <li>the service will be uninterrupted or error-free.</li>
+  </ul>
+  <p>Hydra Neck reduces the impact of losing a group; it is not a guarantee against it.</p>
+
+  <h2 id="liability">11. Limitation of liability</h2>
+  <p>To the extent permitted by law, we are not liable for indirect or consequential losses, lost
+    content, lost profits or loss of reputation, and our total liability for any claim related to
+    the service is limited to the amount you paid us in the 3 months before the claim. Nothing in
+    these terms limits rights you have under consumer-protection laws that cannot be waived,
+    including the Brazilian Consumer Protection Code.</p>
+
+  <h2 id="changes">12. Changes to the service and these terms</h2>
+  <p>We may improve or change the service. If we change these terms in a way that matters, we will
+    tell you through the bot at least 15 days before the change takes effect; the date at the top
+    of this page shows the current version. If you keep using the service after that, the new terms
+    apply; if you don't agree, cancel before they take effect.</p>
+
+  <h2 id="law">13. Governing law</h2>
+  <p>These terms are governed by the laws of Brazil. Disputes go to the courts of the operator's
+    domicile in Brazil, without prejudice to a consumer's right to bring a claim in their own
+    domicile.</p>
+
+  <h2 id="contact">14. Contact and abuse reports</h2>
+  <p>For support, billing, refunds, privacy requests or to report misuse of the service, send
+    <code>/support</code> followed by your message to
+    <a href="https://t.me/HydraNeckBot">@HydraNeckBot</a>. When reporting abuse, include the group
+    link or ID and what happened.</p>
+
+  <footer><a href="./">Home</a> · <a href="privacy.html">Privacy Policy</a></footer>
 </main>
 </body>
 </html>
